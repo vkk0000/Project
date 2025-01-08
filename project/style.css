@@ -403,3 +403,54 @@ body {
   display: inline; /* Keeps the span inline */
   
 }
+
+/* General container styling */
+.catalog {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures cards wrap if screen size is small */
+  margin: 40px;
+}
+
+/* Product card styling */
+.catalog-item {
+  width: 275px; /* Fixed width for all cards */
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.catalog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.catalog-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Price section styling */
+.pricing-info {
+  margin-top: 10px;
+}
+
+.price-new {
+  color:#28a745;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.price-old {
+  color: #dc3545;
+  font-size: 0.9em;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
