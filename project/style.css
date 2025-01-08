@@ -274,74 +274,57 @@ body {
   font-size: 14px; /* Adjust font size as needed */
 }
 
-  
-/* Product Card Container */
-.product-card {
-  width: 350px;
-  border: 15px solid #dddddd;
-  border-radius: 5px;
-  background-color: #fff;
-  text-align: center;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 16px auto;
-  margin-top: 40px;
- 
-  
+
+/* General container styling */
+.product-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures cards wrap if screen size is small */
+  margin: 40px;
 }
 
+/* Product card styling */
+.product-card {
+  width: 275px; /* Fixed width for all cards */
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Product Image Section */
+/* Image styling */
 .product-card img {
   width: 100%;
   height: auto;
+  border-radius: 4px;
 }
 
-/* Product Name */
-.product-card .product-name {
-  font-size: 14px;
+/* Price section styling */
+.price-section {
+  margin-top: 10px;
+}
+
+.current-price {
+  color:#28a745;
+  font-size: 1.2em;
   font-weight: bold;
-  color: #333;
-  margin: 10px 0;
-  padding: 0 10px;
-  line-height: 1.4;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-/* Price Section */
-.product-card .price-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 12px 0;
-}
-
-/* Current Price */
-.product-card .current-price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffa500; /* Highlight price */
-}
-
-/* Old Price */
-.product-card .old-price {
-  font-size: 14px;
-  color: #aaa;
+.old-price {
+  color: #dc3545;
+  font-size: 0.9em;
   text-decoration: line-through;
-}
-
-/* GEL Symbol */
-.product-card .currency-gel {
-  font-weight: bold;
-  margin-right: 2px;
+  margin-left: 5px;
 }
 
 
