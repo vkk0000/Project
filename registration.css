@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.info-bar {
+    background-color: #007f70; /* Greenish background color */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly with space between */
+    align-items: center;
+    padding: 25px 35px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    flex: 1; /* Make all items flexibly grow */
+    min-width: 200px; /* Minimum width for each item */
+}
+
+
+
+.info-item span {
+    font-size: 0.9em; /* Adjust text size */
+}
+
+@media (max-width: 600px) {
+    .info-bar {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start;
+    }
+    .info-item {
+        justify-content: flex-start; /* Align items to the start */
+    }
+}
+/* General styling for the header */
+#header {
+    background-color: white; /* Background color for the header */
+    padding: 35px 45px; /* Space around the content */
+    border-bottom: 0px solid #ddd; /* Optional: subtle border at the bottom */
+}
+
+/* Logo styling */
+#header-logo {
+    display: flex;
+    align-items: center; /* Center logo vertically */
+}
+
+#header-logo img {
+    height: 100px; /* Adjust logo height */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space out logo and nav items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 5px; /* Space between navigation items */
+    list-style: none; /* Remove default list styling */
+    padding: 10;
+    margin: 10;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center; /* Center icons and text vertically */
+    font-family: Arial, sans-serif; /* Adjust font */
+    font-size: 16px; /* Adjust text size */
+}
+
+.nav-link {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icons and text */
+}
+
+.nav-link i {
+    font-size: 9px; /* Icon size */
+}
+
+/* Hover effects */
+.nav-link:hover {
+    color: #00796b; /* Change text color on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+    .nav-item {
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  gap: 120px; /* Increased the gap here */
+  background-color: white;
+  padding: 14px 28px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-icon {
+  font-size: 20px;
+}
+
+.menu-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #555;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: white;
+  border: none;
+  color: #00796b;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-button .arrow {
+  font-size: 10px;
+}
+
+.submit-button {
+  background-color: #00796b;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #005f54;
+}
