@@ -454,3 +454,66 @@ body {
   margin-left: 5px;
 }
 
+
+.pppi{
+  margin-top: 150px;
+}
+
+.font-19 {
+  
+  font-size: 24px; /* Makes the text larger */
+  font-weight: bold; /* Adds emphasis */
+  color: #333; /* Dark gray color for better contrast */
+  text-align: center; /* Centers the text (if used in a block element) */
+  display: inline; /* Keeps the span inline */
+}
+
+/* Main container styling */
+.product-gallery {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures cards wrap if screen size is small */
+  margin: 40px;
+}
+
+/* Store item card styling */
+.store-item {
+  width: 275px; /* Fixed width for all cards */
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.store-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.store-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Price section styling */
+.price-details {
+  margin-top: 10px;
+}
+
+.sale-price {
+  color: #28a745;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.regular-price {
+  color: #dc3545;
+  font-size: 0.9em;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
