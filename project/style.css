@@ -631,7 +631,7 @@ body {
   align-items: center;
   padding: 25px 35px;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
- 
+  
   
 }
 
@@ -643,19 +643,25 @@ body {
 }
 
 .footer-links li {
-  margin-bottom: auto;
+  margin-bottom: 10px; /* Consistent spacing */
 }
 
 .footer-links li::before {
   content: ">> ";
-  color: #fffffe;
+  color: #fffffe; /* Icon color */
   margin-right: 5px;
+}
+
+
+.footer-links li:hover {
+  text-decoration: underline; /* Underline on hover */
 }
 
 .footer-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Space between items */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
 }
 
 .footer-right img {
@@ -668,5 +674,6 @@ body {
   margin-top: 10px;
   width: 100%;
 }
+
 
 
