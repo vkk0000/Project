@@ -624,6 +624,7 @@ body {
 
 /* Footer Styles */
 .footer-container {
+  margin: 0;
   background-color: #007f70; /* Greenish background color */
   color: white;
   display: flex;
@@ -631,7 +632,6 @@ body {
   align-items: center;
   padding: 25px 35px;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  
   
 }
 
