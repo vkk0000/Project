@@ -662,10 +662,11 @@ body {
   align-items: center;
   gap: 20px; /* Space between items */
   flex-wrap: wrap; /* Wrap items on smaller screens */
+  margin-right: 100px;
 }
 
 .footer-right img {
-  max-height: 30px;
+  max-height: 50px;
 }
 
 .footer-copy {
