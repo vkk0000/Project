@@ -14,7 +14,7 @@ body {
 }
 
 .info-item {
-  display: flex;
+  display: flexbox;
   align-items: center;
   gap: 5px;
   flex: 1;
@@ -25,15 +25,7 @@ body {
   font-size: 0.9em;
 }
 
-@media (max-width: 600px) {
-  .info-bar {
-      flex-direction: row;
-      align-items: flex-start;
-  }
-  .info-item {
-      justify-content: flex-start;
-  }
-}
+
 
 #header {
   background-color: white;
@@ -89,15 +81,7 @@ body {
   color: #00796b;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-      flex-direction: row;
-      align-items: flex-start;
-  }
-  .nav-item {
-      margin-bottom: 10px;
-  }
-}
+
 
 .cont {
 display: flex;
