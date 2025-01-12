@@ -127,45 +127,60 @@
 
 
         <div class="login-modal">
-
-            <div class="social-login">
-              <button class="facebook-login">ავტორიზაცია Facebook</button>
-              <button class="gmail-login">ავტორიზაცია Gmail</button>
-            </div>
-            <form class="login-form">
-              <label for="email">ელ. ფოსტა</label>
-              <input type="" id="email" placeholder="">
-
-              <label for="password">პაროლი</label>
-              <input type="password" id="password" placeholder="">
-
-              <label for="password">დაადასტურეთ პაროლი</label>
-              <input type="password" id="" placeholder="">
-
-              <label for="registration-date">რეგისტრაციის თარიღი</label>
-              <input type="date" id="">
-
-              <label for="username">მომხმარებლის სახელი</label>
-              <input type="" id="" placeholder="">
-
-              <label for="country">ქვეყანა</label>
-              <input type="text" id="" placeholder="">
-
-              <label for="city">ქალაქი</label>
-              <input type="" id="" placeholder="">
-
-              <label for="mobile number">მობილურის ნომერი</label>
-              <input type="tel" id="" placeholder="">
-
-              <div class="checkbox-container">
-                <input type="checkbox" id="remember">
-                <label for="remember">დამახსოვრება</label>
-              </div>
-
-              <button class="login-btn">ავტორიზაცია</button>
-              <button class="guest-btn">პაროლის აღდგენა</button>
-            </form>
+          <!-- Social Login Buttons -->
+          <div class="social-login">
+            <button class="facebook-login">ავტორიზაცია Facebook</button>
+            <button class="gmail-login">ავტორიზაცია Gmail</button>
           </div>
+        
+          <!-- Registration Form -->
+          <form class="login-form" id="registrationForm">
+            <!-- Email -->
+            <label for="email">ელ. ფოსტა</label>
+            <input type="email" id="email" required>
+        
+            <!-- Password -->
+            <label for="password">პაროლი</label>
+            <input type="password" id="password"  required>
+        
+            <!-- Confirm Password -->
+            <label for="confirm_password">დაადასტურეთ პაროლი</label>
+            <input type="password" id="confirm_password"  required>
+        
+            <!-- Registration Date -->
+            <label for="registration-date">რეგისტრაციის თარიღი</label>
+            <input type="date" id="registration-date" required>
+        
+            <!-- Username -->
+            <label for="username">მომხმარებლის სახელი</label>
+            <input type="text" id="username"  required>
+        
+            <!-- Country -->
+            <label for="country">ქვეყანა</label>
+            <input type="text" id="country"  required>
+        
+            <!-- City -->
+            <label for="city">ქალაქი</label>
+            <input type="text" id="city"  required>
+        
+            <!-- Mobile Number -->
+            <label for="mobile_number">მობილურის ნომერი</label>
+            <input type="tel" id="mobile_number"  required>
+        
+            <!-- Remember Me Checkbox -->
+            <div class="checkbox-container">
+              <input type="checkbox" id="remember">
+              <label for="remember">დამახსოვრება</label>
+            </div>
+        
+            <!-- Submit and Reset Buttons -->
+            <button type="submit" class="login-btn">რეგისტრაცია</button>
+            <button type="button" class="guest-btn">პაროლის აღდგენა</button>
+          </form>
+        </div>
+        
+     
+        
           
 
           
@@ -186,5 +201,13 @@
             <div class="footer-copy">ITWorks © 2025 ყველა უფლება დაცულია</div>
           </div>
           
+
+
+
+          
+
+
+
+
 </body>
 </html>
