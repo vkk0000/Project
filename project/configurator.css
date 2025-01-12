@@ -2,7 +2,7 @@
   
   /* Product Section */
   .product-section {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0;
   }
@@ -45,8 +45,8 @@
   /* Button */
   .product-btn {
     padding: 8px 15px;
-    background-color: #007f70;
-    color: white;
+    background-color: gray;
+    color: black;
     border: none;
     border-radius: 5px;
     font-size: 14px;
@@ -55,11 +55,12 @@
   }
   
   .product-btn:hover {
-    background-color: #005f53;
+    background-color: white;
   }
   
   /* Link */
   .product-link {
+    margin-left: 1000px;
     font-size: 14px;
     color: #007f70;
     text-decoration: none;
@@ -75,3 +76,4 @@
     border: 0.5px solid #ccc;
   }
   
+
