@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <script src="script.js"></script>
+   
     
     <div class="info-bar">
         <div class="info-item">
@@ -133,15 +133,16 @@
             <button class="gmail-login">ავტორიზაცია Gmail</button>
           </div>
         
-          <!-- Registration Form -->
-          <form class="login-form" id="registrationForm">
-            <!-- Email -->
-            <label for="email">ელ. ფოსტა</label>
-            <input type="email" id="email" required>
+          <div class="login-modal">
+            <form class="login-form" id="registrationForm">
+              <label for="email">ელ. ფოსტა</label>
+              <input type="" id="email" placeholder="" required>
+              <span id="emailError" style="color:red;"></span>
         
-            <!-- Password -->
-            <label for="password">პაროლი</label>
-            <input type="password" id="password"  required>
+              <form class="login-form" id="registrationForm">
+                <label for="password">პაროლი</label>
+                <input type="password" id="password" placeholder="შეიყვანეთ პაროლი" required>
+                <span id="passwordError" style="color:red;"></span> <!-- Error message for password -->
         
             <!-- Confirm Password -->
             <label for="confirm_password">დაადასტურეთ პაროლი</label>
@@ -206,7 +207,7 @@
 
           
 
-
+          <script src="script.js"></script>
 
 
 </body>
