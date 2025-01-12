@@ -10,7 +10,7 @@
   
 
   
-  /* Social login buttons */
+  
   .social-login {
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,7 @@
     background-color: #db4437;
   }
   
-  /* Form styles */
+
   .login-form label {
     font-size: 14px;
     margin-bottom: 5px;

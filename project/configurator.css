@@ -1,7 +1,4 @@
-
-  
-  /* Product Section */
-  .product-section {
+.product-section {
     width: 100%;
     margin: 0 auto;
     padding: 20px 0;
@@ -18,14 +15,14 @@
     border: 0.5px solid #ccc;
   }
   
-  /* Image */
+  
   .product-image img {
     max-width: 120px;
     height: auto;
     margin-right: 20px;
   }
   
-  /* Product Info */
+ 
   .product-info {
     flex: 1;
   }
@@ -41,8 +38,7 @@
     line-height: 1.5;
     margin: 0 0 15px;
   }
-  
-  /* Button */
+
   .product-btn {
     padding: 8px 15px;
     background-color: gray;
@@ -58,7 +54,7 @@
     background-color: white;
   }
   
-  /* Link */
+ 
   .product-link {
     margin-left: 1000px;
     font-size: 14px;
@@ -71,7 +67,7 @@
     text-decoration: underline;
   }
   
-  /* Divider */
+  
   hr {
     border: 0.5px solid #ccc;
   }
