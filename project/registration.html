@@ -126,27 +126,27 @@
         </div>
 
 
-        <div class="login-modal">
-          <!-- Social Login Buttons -->
-          <div class="social-login">
-            <button class="facebook-login">ავტორიზაცია Facebook</button>
-            <button class="gmail-login">ავტორიზაცია Gmail</button>
-          </div>
         
           <div class="login-modal">
             <form class="login-form" id="registrationForm">
               <label for="email">ელ. ფოსტა</label>
-              <input type="" id="email" placeholder="" required>
+              <input type="" id="email"  required>
               <span id="emailError" style="color:red;"></span>
         
               <form class="login-form" id="registrationForm">
                 <label for="password">პაროლი</label>
-                <input type="password" id="password" placeholder="" required>
+                <input type="password" id="password"  required>
                 <span id="passwordError" style="color:red;"></span> <!-- Error message for password -->
         
-            <!-- Confirm Password -->
-            <label for="confirm_password">დაადასტურეთ პაროლი</label>
-            <input type="password" id="confirm_password"  required>
+
+                <div class="form-group">
+                  <label for="confirm_password">დაადასტურეთ პაროლი</label>
+                  <div class="password-input-container">
+                      <input type="password" id="confirm_password" >
+                  </div>
+                  <div class="error" id="confirmPasswordError"></div>
+              </div>
+            
         
             <!-- Registration Date -->
             <label for="registration-date">რეგისტრაციის თარიღი</label>
@@ -180,7 +180,7 @@
           </form>
         </div>
         
-     
+  
         
           
 

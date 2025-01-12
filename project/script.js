@@ -15,78 +15,57 @@ const emailInput = document.getElementById('email');
 const emailError = document.getElementById('emailError');
 const passwordInput = document.getElementById('password');
 const passwordError = document.getElementById('passwordError');
+const confirmPasswordInput = document.getElementById('confirm_password');
+const confirmPasswordError = document.getElementById('confirmPasswordError');
 
-// Email Validation
+// Email validation
 emailInput.addEventListener('input', () => {
-    const email = emailInput.value;
-    const isValid = /\@.+\..{2,}/.test(email); // Checks if there's a dot and at least 2 characters after @
-    const isValidAfterAt = email.indexOf('@') !== -1 && email.substring(email.indexOf('@') + 1).length > 2; // Ensures there are more than 2 characters after @
-
-    if (!isValid || !isValidAfterAt) {
-        emailError.textContent = 'გთხოვთ შეიყვანოთ ვალიდური ელ-ფოსტა!';
-    } else {
-        emailError.textContent = '';
-    }
+    emailError.textContent = !/\S+@\S+\.\S+/.test(emailInput.value) ? 'გთხოვთ შეიყვანოთ ვალიდური ელ-ფოსტა!' : '';
 });
 
-// Password Strength Checker
-function checkPasswordStrength(password) {
-    let message = '';
-    let color = '';
-
-    // Check password strength
-    if (/^[a-zA-Z]+$/.test(password)) {
-        message = 'სუსტი';
-        color = '#e1216d'; // Red
-    } else if (/^[a-zA-Z0-9]+$/.test(password)) {
-        message = 'საშუალო';
-        color = '#FFA500'; // Orange
-    } else if (/[a-z]/.test(password) && /[A-Z]/.test(password) && /[0-9]/.test(password)) {
-        message = 'ძლიერი';
-        color = '#4CAF50'; // Green
-    }
-
-    return { message, color };
-}
-
-// Real-time Password Validation
+// Password strength checker
 passwordInput.addEventListener('input', () => {
     const password = passwordInput.value;
-    const { message, color } = checkPasswordStrength(password);
-
+    const message = password.length < 6 ? 'პაროლი უნდა შეიცავდეს მინიმუმ 6 სიმბოლოს' :
+     /[A-Z]/.test(password) && /[0-9]/.test(password) && /[!@#$%^&*(),.?":{}|<>]/.test(password) ? 'ძლიერი' :
+   /[A-Z0-9]/.test(password) || /[A-Z!@#$%^&*(),.?":{}|<>]/.test(password) || /[0-9!@#$%^&*(),.?":{}|<>]/.test(password) ? 'საშუალო' : 'სუსტი';
     passwordError.textContent = message;
-    passwordError.style.color = color;
+    passwordError.style.color = message === 'ძლიერი' ? '#4CAF50' : message === 'საშუალო' ? '#FFA500' : '#e1216d';
 });
 
-// Form Submission Handler
+// Password match validation
+confirmPasswordInput.addEventListener('input', () => {
+    confirmPasswordError.textContent = confirmPasswordInput.value !== passwordInput.value ? 'პაროლები არ ემთხვევა' : '';
+    confirmPasswordError.style.color = confirmPasswordInput.value !== passwordInput.value ? '#e1216d' : '';
+});
+
+// Form submission
 form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent form submission to check validation
+    e.preventDefault();
+    if (![emailInput.value, passwordInput.value, confirmPasswordInput.value].every(val => val)) {
+        alert('გთხოვთ შეავსოთ ყველა ველი!');
+        return;
+    }
 
-    const email = emailInput.value;
-    const password = passwordInput.value;
-
-    // Validate Email
-    const isValidEmail = /\@.+\..{2,}/.test(email);
-    const isValidEmailAfterAt = email.indexOf('@') !== -1 && email.substring(email.indexOf('@') + 1).length > 2;
-
-    if (!isValidEmail || !isValidEmailAfterAt) {
+    if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
         alert('გთხოვთ შეიყვანოთ ვალიდური ელ-ფოსტა!');
         return;
     }
 
-    // Check password strength
-    const { message, color } = checkPasswordStrength(password);
-
-    if (message !== 'ძლიერი') {
-        alert('პაროლი არ არის საკმარისად ძლიერი!');
+    const password = passwordInput.value;
+    if (password.length < 6 || !/[A-Z]/.test(password) || !/[0-9]/.test(password) || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        alert('პაროლი უნდა შეიცავდეს მინიმუმ 6 სიმბოლოს, 1 დიდ ასოს, 1 ციფრს და 1 სიმბოლოს');
         return;
     }
 
-    alert('რეგისტრაცია წარმატებით დასრულდა');
-    // Form submission or further processing can happen here
-    form.submit(); // Un-comment this line to submit the form after validation
-});
+    if (password !== confirmPasswordInput.value) {
+        alert('პაროლები არ ემთხვევა!');
+        return;
+      
+    }
 
+    window.location.href = 'index.html'; // Proceed to next page
+});
 
 
 
