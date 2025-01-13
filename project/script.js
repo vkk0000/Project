@@ -17,8 +17,11 @@ const confirmPasswordInput = document.getElementById('confirm_password');
 const confirmPasswordError = document.getElementById('confirmPasswordError');
 
 emailInput.addEventListener('input', () => {
-    emailError.textContent = !/\S+@\S+\.\S+/.test(emailInput.value) ? 'გთხოვთ შეიყვანოთ ვალიდური ელ-ფოსტა!' : '';
+    const value = emailInput.value;
+    emailError.textContent = !/^[\w]+@\S+\.\S+/.test(value) || !/\.\w{3,}$/.test(value) ? 'გთხოვთ შეიყვანოთ ვალიდური ელ-ფოსტა!' : '';
 });
+
+
 
 passwordInput.addEventListener('input', () => {
     const password = passwordInput.value;
