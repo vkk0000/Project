@@ -65,27 +65,4 @@ form.addEventListener('submit', (e) => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cookieConsent = document.querySelector('.cookie-consent');
-    const acceptBtn = document.querySelector('.cookie-button.accept');
-    const declineBtn = document.querySelector('.cookie-button.decline');
 
-    if (!localStorage.getItem('cookieConsent')) {
-        setTimeout(() => {
-            cookieConsent.style.display = 'block';  
-            cookieConsent.classList.add('show');
-        }, 1000);
-    }
-
-    acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookieConsent', 'true');
-        cookieConsent.classList.remove('show');
-        cookieConsent.style.display = 'none';  
-    });
-
-    declineBtn.addEventListener('click', () => {
-        localStorage.setItem('cookieConsent', 'false');
-        cookieConsent.classList.remove('show');
-        cookieConsent.style.display = 'none';  
-    });
-});
