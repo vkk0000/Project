@@ -8,6 +8,7 @@ function moveSlide(direction) {
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
+
 const form = document.getElementById('registrationForm');
 const emailInput = document.getElementById('email');
 const emailError = document.getElementById('emailError');
@@ -66,3 +67,8 @@ form.addEventListener('submit', (e) => {
 
 
 
+
+
+
+
+  
